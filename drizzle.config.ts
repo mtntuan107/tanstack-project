@@ -1,4 +1,4 @@
-import 'dotenv/config'; // Thêm dòng này ở đầu file
+import 'dotenv/config'; 
 import { defineConfig } from 'drizzle-kit';
 
 export default defineConfig({
@@ -6,6 +6,7 @@ export default defineConfig({
   out: './drizzle',
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.DATABASE_URL!, // Lúc này process.env mới có giá trị
+    // DATABASE_URL này lấy từ Supabase Settings -> Database
+    url: process.env.DATABASE_URL!, 
   },
 });
